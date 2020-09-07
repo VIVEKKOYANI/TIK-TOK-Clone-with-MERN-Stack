@@ -1,127 +1,31 @@
-*{
-  margin: 0;
+html {
+  scroll-snap-type: y mandatory;
 }
 
-a{
-  margin: 0px;
-  padding: 40px;
+.app {
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
 }
 
-.icon{
-  margin: 10px;
-  padding: 10px;
-}
-
-.button {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 12px;
-  background-color: orangered;
-  color: white;
-}
-
-.home {
-  margin: 2px;
-}
-
-.container {
+.app__videos {
   position: relative;
-  color: white;
-}
-
-.text-block {
-  position: absolute;
-  top: 150px;
-  left: 20px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.border{
-  opacity: 0.4;
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  bottom: 0px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.right{
-  opacity: 0.4;
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  bottom: 0px;
-  left: 1000px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.right-image{
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  bottom: 200px;
-  left: 800px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.text{
-  position: absolute;
-  top: 160px;
-  left: 1px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.bgcolor{
-  opacity: 0.4;
-  width: 100%;
-  bottom: 0px;
-  background-color: black;
-  color: white;
-}
-
-.under-image{
-  width: 100%;
-  height: 10%;
-  position: absolute;
-  bottom: 60px;
-  left: 900px;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  opacity: 0.6;
-}
-
-.btn {
+  height: 800px;
   border-radius: 20px;
-  border-color: orangered;
-  color: orangered;
-  margin: 10px;
-  padding: 10px;
-  background-color: white;
+  overflow: scroll;
+  width: 80%;
+  max-width: 500px;
+  scroll-snap-type: y mandatory;
 }
 
-.footer{
-  margin: 123px;
-  margin-left: 0px;
-  padding: 10px;
-  width: 100%;
-  color: white;
-  background-color: black;
-  height: 100%;
+/* Hide scrollbar from chrome, safari and opera */
+.app__videos::-webkit-scrollbar {
+  display: none;
 }
 
-.footer__news{
-  position: absolute;
-  left: 200px;
+/* Hide scrollbar for IE, Edge and Firefox */
+.app__videos {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
