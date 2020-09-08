@@ -3,7 +3,7 @@ import "./Video.css";
 import Video1 from "./Video/1min Video.mp4";
 import VideoFooter from "./VideoFooter";
 import VideoSidebar from './VideoSidebar';
-function Video() {
+function Video({channel,description,song,likes,shares,messages}) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -32,8 +32,8 @@ function Video() {
         controls
       />
 
-      <VideoFooter />
-      <VideoSidebar />
+      <VideoFooter channel={channel} description={description} song={song} />
+      <VideoSidebar likes={likes} shares={shares} messages={messages} />
       {/* VideoFooter */}
       {/* VideoSidebar */}
     </div>
